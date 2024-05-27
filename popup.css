@@ -1,0 +1,36 @@
+#magnification-control, #contrast-control, #alt-text-control {
+    margin: 10px;  /* Adjust margin as needed */
+  }
+  
+  #magnification-slider {
+    width: 150px;  /* Adjust width as needed */
+    -webkit-appearance: none;  /* Remove default slider appearance for better styling */
+    appearance: none;
+    height: 10px;  /* Adjust slider height as needed */
+    background: #d3d3d3;  /* Adjust background color for the slider track */
+    outline: none;  /* Remove default outline */
+    border-radius: 5px;  /* Add rounded corners for aesthetics */
+    cursor: pointer;  /* Set cursor to indicate interaction on hover */
+  }
+  
+  #magnification-slider:focus{
+    outline: 2px solid #007bff; /*Better focus indicator */
+    }
+    
+  #magnification-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;  /* Remove default slider thumb appearance */
+    appearance: none;
+    width: 20px;  /* Adjust width of the slider thumb */
+    height: 20px;  /* Adjust height of the slider thumb */
+    background: #007bff;  /* Adjust color for the slider thumb */
+    border-radius: 50%; /* Create a circular slider thumb */
+  }
+  
+  #magnification-slider::-moz-range-thumb {
+    /* Additional styling for Firefox compatibility */
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+  }
+  
