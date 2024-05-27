@@ -1,0 +1,55 @@
+# Accessibility Enhancer - Features
+Welcome to the Accessibility Enhancer extension! This document provides an overview of the current features available in this tool. Each feature is designed to improve web accessibility and usability for all users.
+
+**Table of Contents**
+- Font Magnification
+- High Contrast Mode
+- Alternative Text Display
+- Future Improvements
+
+**Font Magnification**
+Overview
+The font magnification feature allows users to increase or decrease the size of text on any webpage. This is particularly useful for users with visual impairments who need larger text to read comfortably.
+
+*How It Works*
+A slider in the extension popup lets you adjust the magnification level from 1x to 2x.
+The extension stores the original font sizes and recalculates them based on the selected magnification level.
+Changes are applied in real-time, ensuring a seamless user experience.
+
+Instructions
+- Open the extension popup.
+- Use the slider to adjust the magnification level.
+- The changes will be applied instantly to the webpage.
+- High Contrast Mode
+- Overview
+- High contrast mode improves the readability of text by increasing the contrast between text and background colors. This mode is essential for users with low vision or color blindness.
+
+*How It Works*
+A toggle switch in the extension popup enables or disables high contrast mode.
+When enabled, the extension applies a filter to invert colors and adjust hues, enhancing text visibility.
+
+Instructions
+- Open the extension popup.
+- Toggle the high contrast mode switch.
+- The webpage will update to reflect the new contrast settings.
+- Alternative Text Display
+- Overview
+- This feature ensures that alternative text (alt text) for images is displayed when you hover over them. Alt text provides descriptions of images, which is crucial for users who rely on screen readers or have images disabled.
+
+How It Works
+A checkbox in the extension popup enables or disables the display of alt text on hover.
+When enabled, hovering over an image will display a tooltip with the alt text. If no alt text is available, a message indicating its absence is shown.
+Instructions
+Open the extension popup.
+Check the box for displaying alt text on hover.
+Hover over images on the webpage to see their alt text.
+Future Improvements
+While the current features provide significant enhancements to web accessibility, we have plans for further improvements, including:
+
+Custom color themes for better visual comfort.
+Text-to-speech functionality to read aloud web content.
+Enhanced keyboard navigation for efficient, mouse-free browsing.
+Advanced font settings for more control over text appearance.
+Localization to support multiple languages.
+Save and share settings across devices and browsers.
+We welcome contributions and suggestions from the community to make this extension even better.
