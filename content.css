@@ -1,0 +1,11 @@
+/* content.css */
+
+.alt-tooltip {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  z-index: 1000;
+  font-size: 14px; /* Adjust as needed */
+}
