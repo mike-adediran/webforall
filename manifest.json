@@ -2,16 +2,16 @@
     "manifest_version": 3,
     "name": "E-commerce Accessibility MVP",
     "version": "1.0",
-    "description": "A basic accessibility extension for e-commerce websites",
+    "description": "A web extension to enhance accessibility features on web pages.",
     "content_scripts": [
       {
         "matches": ["<all_urls>"],
-        "js": ["content.js"]
+        "js": ["content.js"],
+        "css": ["content.css"]
       }
     ],
     "action": {
       "default_popup": "popup.html"
-    },
-    "permissions": ["activeTab", "storage"]
+          },
+    "permissions": ["activeTab", "storage", "scripting"]
   }
-  

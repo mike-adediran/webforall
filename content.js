@@ -60,11 +60,11 @@ function toggleAltText(enabled) {
   const images = document.querySelectorAll('img');
   images.forEach(img => {
     if (enabled) {
-      img.addEventListener ('mouseover', showAltText);
-      img.addEventListener ('mouseout', hideAltText);
+      img.addEventListener ('mouseover', showTooltip);
+      img.addEventListener ('mouseout', hideTooltip);
     } else {
-      img.removeEventListener ('mouseover', showAltText);
-      img.removeEventListener ('mouseout', hideAltText);
+      img.removeEventListener ('mouseover', showTooltip);
+      img.removeEventListener ('mouseout', hideTooltip);
     }
   });
 }
