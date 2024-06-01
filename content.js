@@ -2,6 +2,7 @@
 let magnificationLevel = 1;
 let highContrast = false;
 let showAltText = false;
+let enableTTS = false;
 const originalFontSizes = new Map(); //store original font size
 
 //Function to store the original font size of each element
@@ -29,6 +30,10 @@ chrome.runtime.onMessage.addListener((message) => {
     else if (message.type === "updateContrast") {
     highContrast = message.highContrast;
     updateContrastMode (highContrast);
+    }
+    else if (message.type == "toggleTTS") {
+      enableTTS = message.enabled;
+      toggleTTS (enableTTS);
     }
   });
 // Update text size based on magnification level
@@ -88,4 +93,30 @@ function hideTooltip() {
   if (tooltip) {
     tooltip.remove();
   }
+}
+
+//enable or disable Text-to-Speech
+function toggleTTS (enabled) {
+  if (enabled) {
+      document.addEventListener('selectionchange', handleSelectionChange);
+  } else {
+    document.removeEventListener('selectionchange', handleSelectionChange);
+  }
+}
+
+// Handle text selection and speak the selected text
+function handleSelectionChange() {
+  const selection = document.getSelection();
+  if (selection && selection.rangeCount > 0) {
+    const selectedText = selection.toString().trim();
+    if (selectedText) {
+      speakText(selectedText);
+    }
+  }
+}
+
+// Speak the given text
+function speakText(text) {
+  const utterance = new SpeechSynthesisUtterance(text);
+  speechSynthesis.speak(utterance);
 }
