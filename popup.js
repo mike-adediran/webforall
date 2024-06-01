@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const magnificationLevelSpan = document.getElementById("magnification-level");
   const contrastToggle = document.getElementById("contrast-toggle");
   const altTextCheckbox = document.getElementById("alt-text-checkbox");
+  const ttsToggle = document.getElementById ("tts-toggle");
   
   // Load saved settings
   chrome.storage.sync.get(['magnificationLevel'], (result) => {
@@ -20,13 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
             chrome.tabs.sendMessage(tabs[0].id, {type: "updateContrast", highContrast: result.highContrast });
         });
       }
-      if (result.showAltText) {
+      if (result.showAltText !== undefined) {
         altTextCheckbox.checked = result.showAltText;
         chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
             chrome.tabs.sendMessage(tabs[0].id, {type: "toggleAltText", enabled: result.showAltText});
         });
       }
+    if (result.ttsToggle !== undefined){
+      ttsToggle.checked = result.ttsToggle;
+      chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+        chrome.tabs.sendMessage(tabs[0].id, {type: "toggleTTS", enabled: result.enableTTS});
+      });
+    }
   });
+  
   let debounceTimeout;
   slider.addEventListener("input", (event) => {
       const newMagnificationLevel = parseFloat(event.target.value);
@@ -61,5 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //save the alt text mode
     chrome.storage.sync.set({showAltText});
+  });
+  ttsToggle.addEventListener('change', (event) => {
+    const enableTTS = event.target.checked;
+    chrome.tabs.query ({active: true, currentWindow: true}, (tabs) => {
+      chrome.tabs.sendMessage(tabs[0].id, {type: "toggleTTS", enabled: enableTTS});
+    });
+    //save TTS mode
+    chrome.storage.sync.set({enableTTS});
   });
 });
