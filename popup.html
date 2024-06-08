@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>E-commerce Accessibility - Magnification Control</title>
+  <meta charset = "UTF-8">
+  <title>WebForAll</title>
   <!--<script src="content.js"></script>-->
   <script src="popup.js"></script> 
   <link rel ="stylesheet" href="popup.css">
 
 </head>
 <body>
-  <div id="magnification-control">
-    <label for="magnification-slider">Magnification Level:</label>
+  <div class="header">
+    <img src="WebForAll_logo_128x128.png" alt="WebForAll Logo" class="logo">
+    <h1>WebForAll</h1>
+  </div>
+  <div class="control-group" id="magnification-control">
+    <label for="magnification-slider">Magnification Level</label>
     <input type="range" id="magnification-slider" min="1" max="2" value="1" step="0.2" aria-labelledby="slider-label" aria-valuenow="1" aria-valuemin="1" aria-valuemax="2" title="Adjust the magnification level">
     <span id="magnification-level" aria-live="polite">1x</span>
   </div>
 
 <!-- add contrast toggle switch-->
-    <div id="contrast-control">
+    <div class="control-group" id="contrast-control">
       <label for="contrast-toggle">High Contrast Mode</label>
       <input type="checkbox" id="contrast-toggle">
     </div>
 <!-- add alternative text for images-->
-    <div id="alt-text-control">
-      <label for="alt-text-checkbox">Show Alt Text:</label>
+    <div class="control-group" id="alt-text-control">
+      <label for="alt-text-checkbox">Show Alt Text</label>
       <input type = "checkbox" id="alt-text-checkbox">
     </div>
   <!-- add text-to-speech-->
-  <div id="tts-control">
-    <label for ="tts-toggle">Enable Text-to-Speech:</label>
+  <div class="control-group" id="tts-control">
+    <label for ="tts-toggle">Enable Text-to-Speech</label>
     <input type="checkbox" id="tts-toggle">
   </div>
 </body>
