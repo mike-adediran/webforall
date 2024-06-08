@@ -1,0 +1,29 @@
+**Privacy Policy**
+
+This Privacy Policy governs the manner in which WebForAll collects, uses, maintains, and discloses information collected from users (each, a "User") of the WebForAll Chrome extension ("Extension").
+
+*Information We Collect*
+
+We do not collect any personal information from users of our Extension.
+
+*Use of Information*
+
+The Extension does not collect, store, or share any personal information or user data.
+
+*Permissions*
+
+The Extension requires the following permissions:
+
+activeTab: This permission allows the Extension to interact with the currently active tab in the browser. It is used to enhance the accessibility features of web pages and does not involve the collection of personal information.
+
+storage: This permission enables the Extension to store and retrieve data locally on the user's device. It is used to save user preferences and settings within the Extension.
+
+scripting: This permission is necessary for the Extension to dynamically inject scripts into web pages, enhancing functionality and customization. It does not involve the collection of personal information.
+
+*Changes to This Privacy Policy*
+
+We may update this Privacy Policy from time to time. We encourage Users to frequently check this page for any changes. You acknowledge and agree that it is your responsibility to review this Privacy Policy periodically and become aware of modifications.
+
+*Your Acceptance of These Terms*
+
+By using this Extension, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our Extension. Your continued use of the Extension following the posting of changes to this policy will be deemed your acceptance of those changes.
