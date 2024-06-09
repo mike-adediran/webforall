@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: List directory contents
+      - name: List root directory contents
         run: ls -R
 
       - name: Change to WebForAll directory
