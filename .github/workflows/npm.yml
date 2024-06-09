@@ -16,8 +16,5 @@ jobs:
       - name: Change to WebForAll directory
         run: cd WebForAll
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Run tests
         run: npm test
