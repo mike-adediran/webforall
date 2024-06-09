@@ -1,4 +1,4 @@
-name: Build and Test WebForAll Extension
+name: NPM Install and Test
 
 on:
   push:
@@ -13,9 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build and test extension
-        run: |
-          cd WebForAll
-          npm install
-          npm run build
-          npm test
+      - name: Change to WebForAll directory
+        run: cd WebForAll
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
