@@ -13,8 +13,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: List directory contents
+        run: ls -R
+
       - name: Change to WebForAll directory
-        run: cd /home/runner/work/WebForAll
+        run: cd WebForAll
+
+      - name: List directory contents of WebForAll
+        run: ls -R
 
       - name: Run tests
         run: npm test
