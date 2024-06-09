@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Change to WebForAll directory
-        run: cd webforall
+      - name: Install dependencies
+        run: npm install --prefix ./WebForAll
 
       - name: Run tests
-        run: npm test
+        run: npm test --prefix ./WebForAll
