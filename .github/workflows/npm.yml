@@ -19,7 +19,7 @@ jobs:
           node-version: '20'
 
       - name: Change to WebForAll directory
-        run: cd WebForAll
+        run: cd webforall
 
       - name: Run tests
         run: npm test
