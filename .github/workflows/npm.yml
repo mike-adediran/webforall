@@ -18,7 +18,7 @@ jobs:
 
       - name: Change to the correct directory
         run: |
-          cd WebForAll  
+          cd webforall  
           ls -R        
 
       - name: Run tests
