@@ -16,11 +16,10 @@ jobs:
       - name: List root directory contents
         run: ls -R
 
-      - name: Change to WebForAll directory
-        run: cd webforall
-
-      - name: List directory contents of WebForAll
-        run: ls -R
+      - name: Change to the correct directory
+        run: |
+          cd WebForAll  
+          ls -R        
 
       - name: Run tests
         run: npm test
