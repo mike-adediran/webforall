@@ -5,9 +5,9 @@ This document outlines the potential features for future development, their bene
 
 ## Potential Features
 
-### 1. Text-to-Speech
-- **Description**: Converts on-screen text to spoken words.
-- **Benefits**: Enhances accessibility for users with visual impairments or reading difficulties.
+### 1. Tooltip Explanation
+- **Description**: Briefly describes how each feature works.
+- **Benefits**: Enhances UX by describing how users can activate each feature.
 - **Implementation Complexity**: Moderate
 - **Priority**: High
 
